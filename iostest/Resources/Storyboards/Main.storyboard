@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qx3-mb-Ivv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EOZ-9Y-YER">
+            <objects>
+                <navigationController id="qx3-mb-Ivv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BkG-zf-eMD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K1R-mP-zOq" kind="relationship" relationship="rootViewController" id="TPV-S9-DW9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxb-Zy-xHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2079" y="63"/>
+        </scene>
+        <!--Main Container View Controller-->
+        <scene sceneID="ohI-fc-aHl">
+            <objects>
+                <viewController storyboardIdentifier="mainContainerViewController" id="K1R-mP-zOq" customClass="MainContainerViewController" customModule="iostest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BcC-GO-Jsf"/>
+                        <viewControllerLayoutGuide type="bottom" id="bZw-he-cDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lrB-Z4-Lwj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-3F-JWo" userLabel="Screen">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVh-Th-05P">
+                                        <rect key="frame" x="0.0" y="535" width="375" height="68"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="u6v-hj-gmV"/>
+                                        </constraints>
+                                        <items/>
+                                    </tabBar>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsO-hE-63R">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="535"/>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KsO-hE-63R" secondAttribute="trailing" id="6pt-Rj-OJf"/>
+                                    <constraint firstItem="gVh-Th-05P" firstAttribute="top" secondItem="KsO-hE-63R" secondAttribute="bottom" id="BRZ-wR-cvZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="gVh-Th-05P" secondAttribute="bottom" id="O9O-3d-Omv"/>
+                                    <constraint firstItem="KsO-hE-63R" firstAttribute="leading" secondItem="rbM-3F-JWo" secondAttribute="leading" id="SHR-iY-539"/>
+                                    <constraint firstItem="KsO-hE-63R" firstAttribute="top" secondItem="rbM-3F-JWo" secondAttribute="top" id="agw-rv-3xX"/>
+                                    <constraint firstAttribute="trailing" secondItem="gVh-Th-05P" secondAttribute="trailing" id="xig-HW-IHi"/>
+                                    <constraint firstItem="gVh-Th-05P" firstAttribute="leading" secondItem="rbM-3F-JWo" secondAttribute="leading" id="zcV-vj-4ac"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rbM-3F-JWo" firstAttribute="leading" secondItem="lrB-Z4-Lwj" secondAttribute="leading" id="0T7-Jt-fah"/>
+                            <constraint firstItem="bZw-he-cDy" firstAttribute="top" secondItem="rbM-3F-JWo" secondAttribute="bottom" id="8Xq-43-7jZ"/>
+                            <constraint firstAttribute="trailing" secondItem="rbM-3F-JWo" secondAttribute="trailing" id="fra-hM-FjX"/>
+                            <constraint firstItem="rbM-3F-JWo" firstAttribute="top" secondItem="BcC-GO-Jsf" secondAttribute="bottom" id="nUe-H1-2zn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hMB-ba-qgl"/>
+                    <connections>
+                        <outlet property="contentView" destination="KsO-hE-63R" id="6ZU-Iy-eCI"/>
+                        <outlet property="tabBar" destination="gVh-Th-05P" id="ioc-16-dyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEj-dL-Ngb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1225" y="63"/>
+        </scene>
+    </scenes>
+</document>

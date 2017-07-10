@@ -1,0 +1,36 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - statement_position
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.  
+  - Pods  
+  - UnitTests
+  - Build
+  - iostest/Resources/R/R.generated.swift
+  - iostest/Common/3rdParty
+
+custom_rules:
+  else_statement:
+    regex: "(\\} else)"
+    message: "else statement should be on next line"
+    match_kinds: keyword
+    severity: error   
+  catch_statement: 
+    regex: "(\\} catch)"
+    message: "catch statement should be on next line"
+    match_kinds: keyword
+    severity: error   
+
+type_name:
+  max_length: 60
+  excluded:
+    - T
+    - E
+
+identifier_name:
+  max_length: 60
+  excluded:
+    - ok
+    - id
+    - to
+    - rg

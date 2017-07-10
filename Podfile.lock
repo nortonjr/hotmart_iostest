@@ -1,0 +1,47 @@
+PODS:
+  - LKTabBarController (1.0.0):
+    - SnapKit
+  - NSObject+Rx (2.0.0):
+    - RxSwift
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - RxCocoa (3.5.0):
+    - RxSwift (~> 3.4)
+  - RxDataSources (1.0.3):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.5.0)
+  - RxSwiftExt (2.4.1):
+    - RxSwiftExt/Core (= 2.4.1)
+  - RxSwiftExt/Core (2.4.1):
+    - RxSwift (~> 3.4)
+  - SnapKit (3.2.0)
+  - SwiftyColor (1.0.0)
+
+DEPENDENCIES:
+  - LKTabBarController
+  - NSObject+Rx (= 2.0.0)
+  - R.swift
+  - RxCocoa (~> 3.0)
+  - RxDataSources (~> 1.0)
+  - RxSwift (~> 3.0)
+  - RxSwiftExt (~> 2.0)
+  - SnapKit
+  - SwiftyColor
+
+SPEC CHECKSUMS:
+  LKTabBarController: 4485e0dc6b71993889fcf52b0d8727583250a876
+  NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+  RxSwiftExt: 72278e4a84f35324a82a8dd359859782706576a6
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyColor: 7fa09db14051bc5d7f539e1c4576665975225992
+
+PODFILE CHECKSUM: 9cf50adc59112e4dfd941b92d5cadd19a8ee64e7
+
+COCOAPODS: 1.2.1
