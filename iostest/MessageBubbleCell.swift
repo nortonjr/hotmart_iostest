@@ -16,7 +16,7 @@ class MessageBubbleCell: UICollectionViewCell {
     @IBOutlet weak var profileInitial: UILabel!
 
     var viewModel: MessageBubbleViewModel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

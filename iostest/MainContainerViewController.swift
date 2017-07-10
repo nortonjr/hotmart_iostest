@@ -27,7 +27,7 @@ class MainContainerViewController: UIViewController {
         setup()
 
         tabBar.rx.didSelectItem
-            .subscribe(onNext: { [unowned self] (selectedItem) in
+            .subscribe(onNext: { (selectedItem) in
                 print("\(selectedItem.tag)")
             })
             .disposed(by: disposeBag)

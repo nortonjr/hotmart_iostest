@@ -31,7 +31,6 @@ extension HomeViewController {
         super.viewDidLoad()
 
         tableView.isScrollEnabled = false
-        tableView.allowsSelection = false
         setup()
     }
 
@@ -46,15 +45,15 @@ extension HomeViewController {
 
     fileprivate func setup() {
 
-//        setupBinds()
         setupTableView()
         setupReactiveTableView()
     }
 
     fileprivate func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 141
-        tableView.separatorInset = UIEdgeInsets(top: 4, left: 0, bottom: 4, right: 0)
+        tableView.estimatedRowHeight = 300
+        tableView.separatorInset = .zero
+        tableView.delegate = self
 
         var staticCells: [UITableViewCell] = []
 
@@ -62,16 +61,17 @@ extension HomeViewController {
         staticCells.append(dashboardHeaderCell)
 
         let recentMessagesCell: RecentMessagesCell = R.nib.recentMessagesCell.firstView(owner: self)!
+        recentMessagesCell.viewModel = RecentMessagesViewModel()
         staticCells.append(recentMessagesCell)
 
-        let salesReceiptCell: SaleReceiptCell = R.nib.saleReceiptCell.firstView(owner: self)!
-        staticCells.append(salesReceiptCell)
+        let salesReceiptsContainerCell: SalesReceiptsContainerCell = R.nib.salesReceiptsContainerCell.firstView(owner: self)!
+        staticCells.append(salesReceiptsContainerCell)
 
         tableCells.value = staticCells
     }
 
     fileprivate func setupReactiveTableView() {
-        dataSource.configureCell =  { (_, _, _, cell) in
+        dataSource.configureCell = { (_, _, _, cell) in
             return cell
         }
 
@@ -80,4 +80,12 @@ extension HomeViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag )
     }
+}
+
+// MARK: Table View delegate
+
+extension HomeViewController: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//    }
 }

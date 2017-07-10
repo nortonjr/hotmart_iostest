@@ -8,7 +8,7 @@
 
 import RxDataSources
 
-final class SectionedViewModelType<T> {
+final class SectionViewModelType<T> {
 
     let title: String?
     fileprivate let viewModels: [T]
@@ -19,7 +19,7 @@ final class SectionedViewModelType<T> {
     }
 }
 
-extension SectionedViewModelType: SectionModelType {
+extension SectionViewModelType: SectionModelType {
 
     typealias Item = T
 
@@ -27,7 +27,7 @@ extension SectionedViewModelType: SectionModelType {
         return viewModels
     }
 
-    convenience init(original: SectionedViewModelType, items: [Item]) {
+    convenience init(original: SectionViewModelType, items: [Item]) {
         self.init(title: original.title, viewModels: items)
     }
 }

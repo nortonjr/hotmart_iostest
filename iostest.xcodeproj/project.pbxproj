@@ -41,6 +41,11 @@
 		FB5266221F126E0300CF7671 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266211F126E0300CF7671 /* BaseView.swift */; };
 		FB5266241F126E7600CF7671 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266231F126E7600CF7671 /* AppRouter.swift */; };
 		FB5266261F12760A00CF7671 /* MainContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266251F12760A00CF7671 /* MainContainerViewModel.swift */; };
+		FB66A67F1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A67D1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift */; };
+		FB66A6801F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB66A67E1F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib */; };
+		FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */; };
+		FB66A6841F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */; };
+		FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +90,11 @@
 		FB5266211F126E0300CF7671 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		FB5266231F126E7600CF7671 /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		FB5266251F12760A00CF7671 /* MainContainerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerViewModel.swift; sourceTree = "<group>"; };
+		FB66A67D1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesReceiptsContainerCell.swift; sourceTree = "<group>"; };
+		FB66A67E1F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalesReceiptsContainerCell.xib; sourceTree = "<group>"; };
+		FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+MessageViewModel.swift"; sourceTree = "<group>"; };
+		FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentMessagesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +227,8 @@
 				FB5266251F12760A00CF7671 /* MainContainerViewModel.swift */,
 				FB3D827E1F12B24000B157C8 /* MessageBubbleViewModel.swift */,
 				FB3D828A1F12D59E00B157C8 /* HomeViewModel.swift */,
+				FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */,
+				FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -232,6 +244,8 @@
 				FB3D827B1F12AC5600B157C8 /* MessageBubbleCell.xib */,
 				FB3D82861F12CF3500B157C8 /* SaleReceiptCell.swift */,
 				FB3D82871F12CF3500B157C8 /* SaleReceiptCell.xib */,
+				FB66A67D1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift */,
+				FB66A67E1F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -251,6 +265,7 @@
 				FB52660F1F11955100CF7671 /* Protocols */,
 				FB3D82821F12B7D300B157C8 /* SectionViewModelType.swift */,
 				FB3D82841F12B88E00B157C8 /* StaticCellSectionModelType.swift */,
+				FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -349,6 +364,7 @@
 				FB3573081F1163DF00737535 /* Assets.xcassets in Resources */,
 				FB3D82891F12CF3500B157C8 /* SaleReceiptCell.xib in Resources */,
 				FB3D82751F12A40E00B157C8 /* DashboardHeaderCell.xib in Resources */,
+				FB66A6801F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib in Resources */,
 				FB3573061F115E6B00737535 /* Sales.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,16 +453,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB35730E1F11786A00737535 /* Coordinator.swift in Sources */,
+				FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */,
 				FB3D828B1F12D59E00B157C8 /* HomeViewModel.swift in Sources */,
+				FB66A67F1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift in Sources */,
 				FB3D82881F12CF3500B157C8 /* SaleReceiptCell.swift in Sources */,
 				FB3572DE1F1145AB00737535 /* AppDelegate.swift in Sources */,
 				FB3D82781F12A81B00B157C8 /* RecentMessagesCell.swift in Sources */,
 				FB3D827C1F12AC5600B157C8 /* MessageBubbleCell.swift in Sources */,
+				FB66A6841F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift in Sources */,
 				FB5266111F11977000CF7671 /* AppCoordinator.swift in Sources */,
 				FB3D82811F12B62A00B157C8 /* HomeViewController.swift in Sources */,
 				FB3D827F1F12B24000B157C8 /* MessageBubbleViewModel.swift in Sources */,
 				FB5266201F126D8D00CF7671 /* Presentable.swift in Sources */,
 				FB52660D1F1194F900CF7671 /* ViewModel.swift in Sources */,
+				FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */,
 				FB52661E1F126D3C00CF7671 /* Router.swift in Sources */,
 				FB52660A1F118B9500CF7671 /* R.generated.swift in Sources */,
 				FB5266131F11994C00CF7671 /* MainContainerCoordinator.swift in Sources */,

@@ -79,7 +79,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `DashboardHeaderCell`.
     static let dashboardHeaderCell = _R.nib._DashboardHeaderCell()
@@ -89,6 +89,8 @@ struct R: Rswift.Validatable {
     static let recentMessagesCell = _R.nib._RecentMessagesCell()
     /// Nib `SaleReceiptCell`.
     static let saleReceiptCell = _R.nib._SaleReceiptCell()
+    /// Nib `SalesReceiptsContainerCell`.
+    static let salesReceiptsContainerCell = _R.nib._SalesReceiptsContainerCell()
     
     /// `UINib(name: "DashboardHeaderCell", in: bundle)`
     static func dashboardHeaderCell(_: Void = ()) -> UIKit.UINib {
@@ -110,17 +112,24 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.saleReceiptCell)
     }
     
+    /// `UINib(name: "SalesReceiptsContainerCell", in: bundle)`
+    static func salesReceiptsContainerCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.salesReceiptsContainerCell)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `RecentMessagesCell`.
-    static let recentMessagesCell: Rswift.ReuseIdentifier<RecentMessagesCell> = Rswift.ReuseIdentifier(identifier: "RecentMessagesCell")
+    /// Reuse identifier `SalesReceiptsContainerCell`.
+    static let salesReceiptsContainerCell: Rswift.ReuseIdentifier<SalesReceiptsContainerCell> = Rswift.ReuseIdentifier(identifier: "SalesReceiptsContainerCell")
     /// Reuse identifier `dashboardHeaderCell`.
     static let dashboardHeaderCell: Rswift.ReuseIdentifier<DashboardHeaderCell> = Rswift.ReuseIdentifier(identifier: "dashboardHeaderCell")
     /// Reuse identifier `messageBubbleCell`.
     static let messageBubbleCell: Rswift.ReuseIdentifier<MessageBubbleCell> = Rswift.ReuseIdentifier(identifier: "messageBubbleCell")
+    /// Reuse identifier `recentMessagesCell`.
+    static let recentMessagesCell: Rswift.ReuseIdentifier<RecentMessagesCell> = Rswift.ReuseIdentifier(identifier: "recentMessagesCell")
     /// Reuse identifier `salesReceiptCell`.
     static let salesReceiptCell: Rswift.ReuseIdentifier<SaleReceiptCell> = Rswift.ReuseIdentifier(identifier: "salesReceiptCell")
     
@@ -238,7 +247,7 @@ struct _R: Rswift.Validatable {
       typealias ReusableType = RecentMessagesCell
       
       let bundle = R.hostingBundle
-      let identifier = "RecentMessagesCell"
+      let identifier = "recentMessagesCell"
       let name = "RecentMessagesCell"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecentMessagesCell? {
@@ -257,6 +266,20 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> SaleReceiptCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SaleReceiptCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _SalesReceiptsContainerCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = SalesReceiptsContainerCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "SalesReceiptsContainerCell"
+      let name = "SalesReceiptsContainerCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> SalesReceiptsContainerCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SalesReceiptsContainerCell
       }
       
       fileprivate init() {}
