@@ -15,6 +15,7 @@ class SalesReceiptsContainerCell: UITableViewCell {
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     let disposeBag: DisposeBag = DisposeBag()
 
     fileprivate let dataSource = RxTableViewSectionedReloadDataSource<StaticCellSectionModelType>()
@@ -44,12 +45,12 @@ extension SalesReceiptsContainerCell {
 
     fileprivate func setupTableView() {
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 201
+        tableView.estimatedRowHeight = 120
         tableView.separatorInset = .zero
 
         var staticCells: [UITableViewCell] = []
 
-        for _ in 0...6 {
+        for _ in 0...20 {
             let receiptCell: SaleReceiptCell = R.nib.saleReceiptCell.firstView(owner: self)!
             staticCells.append(receiptCell)
         }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MessageBubbleCell: UICollectionViewCell {
 
@@ -15,7 +17,19 @@ class MessageBubbleCell: UICollectionViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileInitial: UILabel!
 
-    var viewModel: MessageBubbleViewModel!
+    let disposeBag: DisposeBag = DisposeBag()
+
+    var viewModel: MessageBubbleViewModel! {
+        didSet {
+            viewModel.userName
+                .drive(userName.rx.text)
+                .disposed(by: disposeBag)
+
+            viewModel.backgroundColor
+                .drive(profileContainer.rx.backgroundColor)
+                .disposed(by: disposeBag)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -7,13 +7,14 @@
 //
 
 import RxSwift
+import RxCocoa
 
 extension ObservableType where E == [MessageBubbleCell] {
 
-    func viewModels(viewModel: RecentMessagesViewModel) -> Observable<[MessageViewModel]> {
+    func viewModels(viewModel: RecentMessagesViewModel) -> Observable<[MessageBubbleViewModel]> {
         return map { (messages) in
             return messages.map { message in
-                return MessageViewModel(messages: [message], viewModel: viewModel)
+                return MessageBubbleViewModel()
             }
         }
     }

@@ -46,6 +46,9 @@
 		FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */; };
 		FB66A6841F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */; };
 		FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */; };
+		FBD1C18A1F14547A006B80CB /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C1891F14547A006B80CB /* Stylesheet.swift */; };
+		FBD1C18C1F145708006B80CB /* UIView+RxExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */; };
+		FBD1C18E1F145BEF006B80CB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18D1F145BEF006B80CB /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+MessageViewModel.swift"; sourceTree = "<group>"; };
 		FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentMessagesViewModel.swift; sourceTree = "<group>"; };
+		FBD1C1891F14547A006B80CB /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
+		FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RxExt.swift"; sourceTree = "<group>"; };
+		FBD1C18D1F145BEF006B80CB /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +272,9 @@
 				FB3D82821F12B7D300B157C8 /* SectionViewModelType.swift */,
 				FB3D82841F12B88E00B157C8 /* StaticCellSectionModelType.swift */,
 				FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */,
+				FBD1C1891F14547A006B80CB /* Stylesheet.swift */,
+				FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */,
+				FBD1C18D1F145BEF006B80CB /* Random.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 			files = (
 				FB35730E1F11786A00737535 /* Coordinator.swift in Sources */,
 				FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */,
+				FBD1C18E1F145BEF006B80CB /* Random.swift in Sources */,
 				FB3D828B1F12D59E00B157C8 /* HomeViewModel.swift in Sources */,
 				FB66A67F1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift in Sources */,
 				FB3D82881F12CF3500B157C8 /* SaleReceiptCell.swift in Sources */,
@@ -466,6 +476,7 @@
 				FB3D827F1F12B24000B157C8 /* MessageBubbleViewModel.swift in Sources */,
 				FB5266201F126D8D00CF7671 /* Presentable.swift in Sources */,
 				FB52660D1F1194F900CF7671 /* ViewModel.swift in Sources */,
+				FBD1C18C1F145708006B80CB /* UIView+RxExt.swift in Sources */,
 				FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */,
 				FB52661E1F126D3C00CF7671 /* Router.swift in Sources */,
 				FB52660A1F118B9500CF7671 /* R.generated.swift in Sources */,
@@ -477,6 +488,7 @@
 				FB5266191F12021B00CF7671 /* MainContainerViewController.swift in Sources */,
 				FB5266221F126E0300CF7671 /* BaseView.swift in Sources */,
 				FB52661B1F1203C100CF7671 /* CustomTabBarItem.swift in Sources */,
+				FBD1C18A1F14547A006B80CB /* Stylesheet.swift in Sources */,
 				FB3D82851F12B88E00B157C8 /* StaticCellSectionModelType.swift in Sources */,
 				FB5266261F12760A00CF7671 /* MainContainerViewModel.swift in Sources */,
 			);

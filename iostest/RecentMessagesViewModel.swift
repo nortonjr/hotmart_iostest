@@ -18,14 +18,14 @@ class RecentMessagesViewModel: ViewModel {
     }
 
     fileprivate var messages: Variable<[MessageBubbleCell]> = Variable([])
-    fileprivate var items: [MessageViewModel] = []
+    fileprivate var items: [MessageBubbleViewModel] = []
 
-    var messagesModels: Observable<[SectionViewModelType<MessageViewModel>]> {
+    var messagesModels: Observable<[SectionViewModelType<MessageBubbleViewModel>]> {
         return messages.asObservable().viewModels(viewModel: self)
             .map { return [SectionViewModelType(viewModels: $0)] }
     }
 
-    var messagesCards: Driver<[SectionViewModelType<MessageViewModel>]> {
+    var messagesCards: Driver<[SectionViewModelType<MessageBubbleViewModel>]> {
         return messagesModels
             .do(onNext: { sections in
                 if let sections = sections.first {
@@ -38,6 +38,7 @@ class RecentMessagesViewModel: ViewModel {
         var items: [MessageBubbleCell] = []
         for _ in 0...10 {
             let cell = R.nib.messageBubbleCell.firstView(owner: nil)
+            cell?.viewModel = MessageBubbleViewModel()
             items.append(cell!)
         }
         self.messages.value = items

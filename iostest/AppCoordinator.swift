@@ -39,8 +39,10 @@ class AppCoordinator: Coordinator {
         homeCoordinator.start()
 
         window.rootViewController = navigationController
-        navigationController.navigationController?.title = "Dashboard"
-        navigationController.navigationBar.barTintColor = 0xD04F2A.color
+//        navigationController.navigationBa
+        navigationController.navigationBar.barTintColor = Stylesheet.Color.mainOrange
+        navigationController.navigationBar.isTranslucent = false
+        
     }
 }
 
