@@ -44,6 +44,9 @@ class AppCoordinator: Coordinator {
         let messagesCoordinator: MessagesCoordinator = MessagesCoordinator(window: window, appCoordinator: self)
         self.childCoordinators[.messages] = messagesCoordinator
 
+        let salesCoordinator: SalesCoordinator = SalesCoordinator(window: window, appCoordinator: self)
+        self.childCoordinators[.sales] = salesCoordinator
+
         window.rootViewController = navigationController
 
         navigationController.navigationBar.barTintColor = Stylesheet.Color.mainOrange
@@ -73,14 +76,29 @@ extension AppCoordinator {
         mainViewController.contentView.subviews.first?.removeFromSuperview()
         view.frame.size.height = mainViewController.contentView.frame.size.height
         mainViewController.contentView.addSubview(view)
-        navigationController?.navigationBar.topItem?.title = "Mensagens"
-        navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainYellow
     }
 
     func presentTab(index: Int) {
         switch index {
-        case 1:
+        case 0:
             self.childCoordinators[.messages]?.start()
+        case 1:
+            self.childCoordinators[.sales]?.start()
+        default:
+            break
+        }
+
+        setupNavBarAppearence(index: index)
+    }
+
+    func setupNavBarAppearence(index: Int) {
+        switch index {
+        case 0:
+            navigationController?.navigationBar.topItem?.title = "Mensagens"
+            navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainYellow
+        case 1:
+            navigationController?.navigationBar.topItem?.title = "Minhas Vendas"
+            navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainBlue
         default:
             break
         }

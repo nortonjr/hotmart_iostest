@@ -47,6 +47,8 @@
 		FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */; };
 		FB827AE81F159AF400BFDDF5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */; };
 		FB827AEC1F15A85B00BFDDF5 /* MessagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */; };
+		FB827AEE1F15BA8500BFDDF5 /* SalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AED1F15BA8500BFDDF5 /* SalesViewController.swift */; };
+		FB827AF01F15BDEE00BFDDF5 /* SalesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AEF1F15BDEE00BFDDF5 /* SalesCoordinator.swift */; };
 		FBD1C18A1F14547A006B80CB /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C1891F14547A006B80CB /* Stylesheet.swift */; };
 		FBD1C18C1F145708006B80CB /* UIView+RxExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */; };
 		FBD1C18E1F145BEF006B80CB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18D1F145BEF006B80CB /* Random.swift */; };
@@ -100,6 +102,8 @@
 		FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentMessagesViewModel.swift; sourceTree = "<group>"; };
 		FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesCoordinator.swift; sourceTree = "<group>"; };
+		FB827AED1F15BA8500BFDDF5 /* SalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesViewController.swift; sourceTree = "<group>"; };
+		FB827AEF1F15BDEE00BFDDF5 /* SalesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesCoordinator.swift; sourceTree = "<group>"; };
 		FBD1C1891F14547A006B80CB /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RxExt.swift"; sourceTree = "<group>"; };
 		FBD1C18D1F145BEF006B80CB /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 				FB3D828C1F12D5E000B157C8 /* HomeCoordinator.swift */,
 				FB5266121F11994C00CF7671 /* MainContainerCoordinator.swift */,
 				FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */,
+				FB827AEF1F15BDEE00BFDDF5 /* SalesCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				FB3D82801F12B62A00B157C8 /* HomeViewController.swift */,
 				FB5266181F12021B00CF7671 /* MainContainerViewController.swift */,
 				FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */,
+				FB827AED1F15BA8500BFDDF5 /* SalesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -477,6 +483,7 @@
 				FB3D827C1F12AC5600B157C8 /* MessageBubbleCell.swift in Sources */,
 				FB66A6841F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift in Sources */,
 				FB5266111F11977000CF7671 /* AppCoordinator.swift in Sources */,
+				FB827AEE1F15BA8500BFDDF5 /* SalesViewController.swift in Sources */,
 				FB3D82811F12B62A00B157C8 /* HomeViewController.swift in Sources */,
 				FB3D827F1F12B24000B157C8 /* MessageBubbleViewModel.swift in Sources */,
 				FB5266201F126D8D00CF7671 /* Presentable.swift in Sources */,
@@ -490,6 +497,7 @@
 				FB5266131F11994C00CF7671 /* MainContainerCoordinator.swift in Sources */,
 				FB5266241F126E7600CF7671 /* AppRouter.swift in Sources */,
 				FB3D82831F12B7D300B157C8 /* SectionViewModelType.swift in Sources */,
+				FB827AF01F15BDEE00BFDDF5 /* SalesCoordinator.swift in Sources */,
 				FB3D828D1F12D5E000B157C8 /* HomeCoordinator.swift in Sources */,
 				FB3D82741F12A40E00B157C8 /* DashboardHeaderCell.swift in Sources */,
 				FB5266191F12021B00CF7671 /* MainContainerViewController.swift in Sources */,

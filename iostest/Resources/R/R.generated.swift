@@ -356,6 +356,7 @@ struct _R: Rswift.Validatable {
       try main.validate()
       try messages.validate()
       try home.validate()
+      try sales.validate()
     }
     
     struct home: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -421,9 +422,20 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct sales: Rswift.StoryboardResourceType {
+    struct sales: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+      
       let bundle = R.hostingBundle
       let name = "Sales"
+      let salesViewController = StoryboardViewControllerResource<SalesViewController>(identifier: "SalesViewController")
+      
+      func salesViewController(_: Void = ()) -> SalesViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: salesViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.sales().salesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'salesViewController' could not be loaded from storyboard 'Sales' as 'SalesViewController'.") }
+      }
       
       fileprivate init() {}
     }
