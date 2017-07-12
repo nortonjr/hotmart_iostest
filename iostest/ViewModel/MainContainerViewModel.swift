@@ -18,3 +18,25 @@ class MainContainerViewModel: ViewModel {
         self.coordinator = coordinator
     }
 }
+
+// MARK: Actions
+
+extension MainContainerViewModel {
+
+    func selectedTabBar(tab: Int) {
+        switch tab {
+        case 0:
+            showMessages()
+        case 1:
+            break
+        case 2:
+            break
+        default:
+            break
+        }
+    }
+
+    fileprivate func showMessages() {
+        coordinator.presentTab(index: 1)
+    }
+}

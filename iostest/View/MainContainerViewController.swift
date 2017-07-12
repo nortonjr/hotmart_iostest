@@ -29,6 +29,7 @@ class MainContainerViewController: UIViewController {
         tabBar.rx.didSelectItem
             .subscribe(onNext: { (selectedItem) in
                 print("\(selectedItem.tag)")
+                self.viewModel.selectedTabBar(tab: selectedItem.tag)
             })
             .disposed(by: disposeBag)
     }
@@ -36,16 +37,26 @@ class MainContainerViewController: UIViewController {
     func setup() {
         setupTabBarItems()
         setupTabBarSeparators()
+        setupNavbarAppearence()
 
         guard let view = presentingView else { return }
         view.frame = contentView.bounds
         contentView.addSubview(view)
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 }
 
 // MARK: Layout
 
 extension MainContainerViewController {
+
+    fileprivate func setupNavbarAppearence() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.ic_dehaze(), style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.white
+    }
 
     fileprivate func setupTabBarItems() {
         let messagesItem = tabBarItemFactory(image: R.image.ico_mensagem()!, tag: 0)

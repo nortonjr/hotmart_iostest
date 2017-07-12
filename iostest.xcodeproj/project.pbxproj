@@ -35,7 +35,6 @@
 		FB5266111F11977000CF7671 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266101F11977000CF7671 /* AppCoordinator.swift */; };
 		FB5266131F11994C00CF7671 /* MainContainerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266121F11994C00CF7671 /* MainContainerCoordinator.swift */; };
 		FB5266191F12021B00CF7671 /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266181F12021B00CF7671 /* MainContainerViewController.swift */; };
-		FB52661B1F1203C100CF7671 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52661A1F1203C100CF7671 /* CustomTabBarItem.swift */; };
 		FB52661E1F126D3C00CF7671 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52661D1F126D3C00CF7671 /* Router.swift */; };
 		FB5266201F126D8D00CF7671 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB52661F1F126D8D00CF7671 /* Presentable.swift */; };
 		FB5266221F126E0300CF7671 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5266211F126E0300CF7671 /* BaseView.swift */; };
@@ -46,6 +45,8 @@
 		FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */; };
 		FB66A6841F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */; };
 		FB66A6861F13135100A3F3B8 /* RecentMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */; };
+		FB827AE81F159AF400BFDDF5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */; };
+		FB827AEC1F15A85B00BFDDF5 /* MessagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */; };
 		FBD1C18A1F14547A006B80CB /* Stylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C1891F14547A006B80CB /* Stylesheet.swift */; };
 		FBD1C18C1F145708006B80CB /* UIView+RxExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */; };
 		FBD1C18E1F145BEF006B80CB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD1C18D1F145BEF006B80CB /* Random.swift */; };
@@ -60,14 +61,14 @@
 		F683CD7C368EBA5695EE1D9D /* Pods-iostest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iostest/Pods-iostest.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3572DA1F1145AB00737535 /* iostest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB3572DD1F1145AB00737535 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB3572FD1F115E6B00737535 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		FB3572FE1F115E6B00737535 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FB3572FF1F115E6B00737535 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FB3573001F115E6B00737535 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Messages.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
-		FB3573011F115E6B00737535 /* Sales.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Sales.storyboard; path = Sales.storyboard; sourceTree = "<group>"; };
-		FB3573071F1163DF00737535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB3572FD1F115E6B00737535 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		FB3572FE1F115E6B00737535 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB3572FF1F115E6B00737535 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FB3573001F115E6B00737535 /* Messages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		FB3573011F115E6B00737535 /* Sales.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sales.storyboard; sourceTree = "<group>"; };
+		FB3573071F1163DF00737535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB35730D1F11786A00737535 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		FB3573101F11835000737535 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Info.plist; sourceTree = "<group>"; };
+		FB3573101F11835000737535 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB3D82721F12A40E00B157C8 /* DashboardHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardHeaderCell.swift; sourceTree = "<group>"; };
 		FB3D82731F12A40E00B157C8 /* DashboardHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardHeaderCell.xib; sourceTree = "<group>"; };
 		FB3D82761F12A81B00B157C8 /* RecentMessagesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentMessagesCell.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		FB5266101F11977000CF7671 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FB5266121F11994C00CF7671 /* MainContainerCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerCoordinator.swift; sourceTree = "<group>"; };
 		FB5266181F12021B00CF7671 /* MainContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
-		FB52661A1F1203C100CF7671 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
 		FB52661D1F126D3C00CF7671 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FB52661F1F126D8D00CF7671 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		FB5266211F126E0300CF7671 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -98,6 +98,8 @@
 		FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+MessageViewModel.swift"; sourceTree = "<group>"; };
 		FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentMessagesViewModel.swift; sourceTree = "<group>"; };
+		FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesCoordinator.swift; sourceTree = "<group>"; };
 		FBD1C1891F14547A006B80CB /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
 		FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RxExt.swift"; sourceTree = "<group>"; };
 		FBD1C18D1F145BEF006B80CB /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				0002C42146EB5B11E245231A /* Pods_iostestCommon_iostest.framework */,
 			);
 			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		3E8F0113B9AE17DCAB11E6D8 /* Pods */ = {
@@ -133,14 +136,12 @@
 				CCD0879A87C13717A56DB075 /* Pods-iostestCommon-iostest.release.xcconfig */,
 			);
 			name = Pods;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FB3572D11F1145AB00737535 = {
 			isa = PBXGroup;
 			children = (
-				26C69736B66A28965B26BA4D /* Frameworks */,
-				3E8F0113B9AE17DCAB11E6D8 /* Pods */,
-				FB3572DB1F1145AB00737535 /* Products */,
 				FB3572DC1F1145AB00737535 /* iostest */,
 			);
 			sourceTree = "<group>";
@@ -151,20 +152,23 @@
 				FB3572DA1F1145AB00737535 /* iostest.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FB3572DC1F1145AB00737535 /* iostest */ = {
 			isa = PBXGroup;
 			children = (
-				FB3573091F11778D00737535 /* App */,
 				FB52660E1F11954200CF7671 /* Common */,
 				FB35730A1F11779300737535 /* Coordinator */,
-				FB3572F11F114E5500737535 /* Resources */,
-				FB52661C1F126D3300CF7671 /* Router */,
-				FB3572F31F114E6C00737535 /* Supporting Files */,
 				FB35730B1F11779A00737535 /* View */,
 				FB35730C1F1177A100737535 /* ViewModel */,
-				FB52661A1F1203C100CF7671 /* CustomTabBarItem.swift */,
+				FB52661C1F126D3300CF7671 /* Router */,
+				FB3573091F11778D00737535 /* App */,
+				FB3572F11F114E5500737535 /* Resources */,
+				FB3572F31F114E6C00737535 /* Supporting Files */,
+				26C69736B66A28965B26BA4D /* Frameworks */,
+				3E8F0113B9AE17DCAB11E6D8 /* Pods */,
+				FB3572DB1F1145AB00737535 /* Products */,
 			);
 			path = iostest;
 			sourceTree = "<group>";
@@ -176,7 +180,6 @@
 				FB3572F21F114E6400737535 /* Storyboards */,
 				FB3573071F1163DF00737535 /* Assets.xcassets */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -189,7 +192,6 @@
 				FB3573001F115E6B00737535 /* Messages.storyboard */,
 				FB3573011F115E6B00737535 /* Sales.storyboard */,
 			);
-			name = Storyboards;
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
@@ -198,7 +200,6 @@
 			children = (
 				FB3573101F11835000737535 /* Info.plist */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
@@ -207,7 +208,6 @@
 			children = (
 				FB3572DD1F1145AB00737535 /* AppDelegate.swift */,
 			);
-			name = App;
 			path = App;
 			sourceTree = "<group>";
 		};
@@ -217,8 +217,8 @@
 				FB5266101F11977000CF7671 /* AppCoordinator.swift */,
 				FB3D828C1F12D5E000B157C8 /* HomeCoordinator.swift */,
 				FB5266121F11994C00CF7671 /* MainContainerCoordinator.swift */,
+				FB827AEB1F15A85B00BFDDF5 /* MessagesCoordinator.swift */,
 			);
-			name = Coordinator;
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
@@ -228,8 +228,8 @@
 				FB3D826F1F12A37400B157C8 /* Cell */,
 				FB3D82801F12B62A00B157C8 /* HomeViewController.swift */,
 				FB5266181F12021B00CF7671 /* MainContainerViewController.swift */,
+				FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -242,7 +242,6 @@
 				FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */,
 				FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */,
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
@@ -260,7 +259,6 @@
 				FB66A67D1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift */,
 				FB66A67E1F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib */,
 			);
-			name = Cell;
 			path = Cell;
 			sourceTree = "<group>";
 		};
@@ -269,7 +267,6 @@
 			children = (
 				FB5266091F118B9500CF7671 /* R.generated.swift */,
 			);
-			name = R;
 			path = R;
 			sourceTree = "<group>";
 		};
@@ -284,7 +281,6 @@
 				FBD1C1891F14547A006B80CB /* Stylesheet.swift */,
 				FBD1C18B1F145708006B80CB /* UIView+RxExt.swift */,
 			);
-			name = Common;
 			path = Common;
 			sourceTree = "<group>";
 		};
@@ -297,7 +293,6 @@
 				FB52661D1F126D3C00CF7671 /* Router.swift */,
 				FB52660C1F1194F900CF7671 /* ViewModel.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -306,7 +301,6 @@
 			children = (
 				FB5266231F126E7600CF7671 /* AppRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -488,7 +482,9 @@
 				FB5266201F126D8D00CF7671 /* Presentable.swift in Sources */,
 				FB52660D1F1194F900CF7671 /* ViewModel.swift in Sources */,
 				FBD1C18C1F145708006B80CB /* UIView+RxExt.swift in Sources */,
+				FB827AE81F159AF400BFDDF5 /* MessagesViewController.swift in Sources */,
 				FB66A6821F130D5700A3F3B8 /* MessageViewModel.swift in Sources */,
+				FB827AEC1F15A85B00BFDDF5 /* MessagesCoordinator.swift in Sources */,
 				FB52661E1F126D3C00CF7671 /* Router.swift in Sources */,
 				FB52660A1F118B9500CF7671 /* R.generated.swift in Sources */,
 				FB5266131F11994C00CF7671 /* MainContainerCoordinator.swift in Sources */,
@@ -498,7 +494,6 @@
 				FB3D82741F12A40E00B157C8 /* DashboardHeaderCell.swift in Sources */,
 				FB5266191F12021B00CF7671 /* MainContainerViewController.swift in Sources */,
 				FB5266221F126E0300CF7671 /* BaseView.swift in Sources */,
-				FB52661B1F1203C100CF7671 /* CustomTabBarItem.swift in Sources */,
 				FBD1C18A1F14547A006B80CB /* Stylesheet.swift in Sources */,
 				FB3D82851F12B88E00B157C8 /* StaticCellSectionModelType.swift in Sources */,
 				FB5266261F12760A00CF7671 /* MainContainerViewModel.swift in Sources */,

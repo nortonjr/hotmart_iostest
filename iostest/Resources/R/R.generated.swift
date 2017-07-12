@@ -31,29 +31,62 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 6 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
+    /// Image `ic_dehaze`.
+    static let ic_dehaze = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_dehaze")
+    /// Image `ico_afiliados`.
+    static let ico_afiliados = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_afiliados")
     /// Image `ico_alert`.
     static let ico_alert = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_alert")
+    /// Image `ico_dashboard`.
+    static let ico_dashboard = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_dashboard")
     /// Image `ico_lupa`.
     static let ico_lupa = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_lupa")
+    /// Image `ico_mensagem-1`.
+    static let ico_mensagem1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_mensagem-1")
     /// Image `ico_mensagem`.
     static let ico_mensagem = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_mensagem")
+    /// Image `ico_meus_produtos`.
+    static let ico_meus_produtos = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_meus_produtos")
+    /// Image `ico_minha_conta`.
+    static let ico_minha_conta = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minha_conta")
+    /// Image `ico_minhas_vendas-1`.
+    static let ico_minhas_vendas1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minhas_vendas-1")
     /// Image `ico_minhas_vendas`.
     static let ico_minhas_vendas = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minhas_vendas")
+    /// Image `ico_notificacoes-1`.
+    static let ico_notificacoes1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_notificacoes-1")
     /// Image `ico_notificacoes`.
     static let ico_notificacoes = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_notificacoes")
+    /// Image `ico_sobre_o_app`.
+    static let ico_sobre_o_app = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_sobre_o_app")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.launchImage, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "ic_dehaze", bundle: ..., traitCollection: ...)`
+    static func ic_dehaze(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_dehaze, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_afiliados", bundle: ..., traitCollection: ...)`
+    static func ico_afiliados(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_afiliados, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "ico_alert", bundle: ..., traitCollection: ...)`
     static func ico_alert(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ico_alert, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_dashboard", bundle: ..., traitCollection: ...)`
+    static func ico_dashboard(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_dashboard, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "ico_lupa", bundle: ..., traitCollection: ...)`
@@ -66,14 +99,44 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.ico_mensagem, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "ico_mensagem-1", bundle: ..., traitCollection: ...)`
+    static func ico_mensagem1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_mensagem1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_meus_produtos", bundle: ..., traitCollection: ...)`
+    static func ico_meus_produtos(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_meus_produtos, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_minha_conta", bundle: ..., traitCollection: ...)`
+    static func ico_minha_conta(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_minha_conta, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "ico_minhas_vendas", bundle: ..., traitCollection: ...)`
     static func ico_minhas_vendas(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ico_minhas_vendas, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "ico_minhas_vendas-1", bundle: ..., traitCollection: ...)`
+    static func ico_minhas_vendas1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_minhas_vendas1, compatibleWith: traitCollection)
+    }
+    
     /// `UIImage(named: "ico_notificacoes", bundle: ..., traitCollection: ...)`
     static func ico_notificacoes(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ico_notificacoes, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_notificacoes-1", bundle: ..., traitCollection: ...)`
+    static func ico_notificacoes1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_notificacoes1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "ico_sobre_o_app", bundle: ..., traitCollection: ...)`
+    static func ico_sobre_o_app(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ico_sobre_o_app, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -291,6 +354,7 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try main.validate()
+      try messages.validate()
       try home.validate()
     }
     
@@ -339,9 +403,20 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct messages: Rswift.StoryboardResourceType {
+    struct messages: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+      
       let bundle = R.hostingBundle
+      let messagesViewController = StoryboardViewControllerResource<MessagesViewController>(identifier: "messagesViewController")
       let name = "Messages"
+      
+      func messagesViewController(_: Void = ()) -> MessagesViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: messagesViewController)
+      }
+      
+      static func validate() throws {
+        if _R.storyboard.messages().messagesViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'messagesViewController' could not be loaded from storyboard 'Messages' as 'MessagesViewController'.") }
+      }
       
       fileprivate init() {}
     }

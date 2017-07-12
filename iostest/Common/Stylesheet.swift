@@ -17,5 +17,6 @@ struct Stylesheet {
         static let mainGreen: UIColor = 0xa3c74b.color
         static let mainPurple: UIColor = 0x5f498c.color
         static let mainOrange: UIColor = 0xd04f2a.color
+        static let mainYellow: UIColor = 0xe7ad45.color
     }
 }

@@ -23,6 +23,8 @@ class AppCoordinator: Coordinator {
         return R.storyboard.main.instantiateInitialViewController()
     }()
 
+    fileprivate weak var navigationController: UINavigationController?
+
     required init(window: UIWindow) {
         self.window = window
     }
@@ -31,6 +33,7 @@ class AppCoordinator: Coordinator {
         guard let navigationController = baseViewController  else { fatalError("Error initializing main view controller") }
 
         let mainViewController = R.storyboard.main.mainContainerViewController()!
+        mainViewController.viewModel = MainContainerViewModel(coordinator: self)
         navigationController.viewControllers = [mainViewController]
 
         let homeCoordinator: HomeCoordinator = HomeCoordinator(window: window, appCoordinator: self)
@@ -38,11 +41,20 @@ class AppCoordinator: Coordinator {
         self.childCoordinators[.home] = homeCoordinator
         homeCoordinator.start()
 
+        let messagesCoordinator: MessagesCoordinator = MessagesCoordinator(window: window, appCoordinator: self)
+        self.childCoordinators[.messages] = messagesCoordinator
+
         window.rootViewController = navigationController
-//        navigationController.navigationBa
+
         navigationController.navigationBar.barTintColor = Stylesheet.Color.mainOrange
         navigationController.navigationBar.isTranslucent = false
-        
+        navigationController.navigationBar.topItem?.title = "Dashboard"
+        self.navigationController = navigationController
+        installAppearence()
+    }
+
+    func installAppearence() {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
 }
 
@@ -54,5 +66,23 @@ extension AppCoordinator {
         guard let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
 
         mainViewController.presentingView = view
+    }
+
+    func presentTabView(_ view: UIView) {
+        guard let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
+        mainViewController.contentView.subviews.first?.removeFromSuperview()
+        view.frame.size.height = mainViewController.contentView.frame.size.height
+        mainViewController.contentView.addSubview(view)
+        navigationController?.navigationBar.topItem?.title = "Mensagens"
+        navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainYellow
+    }
+
+    func presentTab(index: Int) {
+        switch index {
+        case 1:
+            self.childCoordinators[.messages]?.start()
+        default:
+            break
+        }
     }
 }

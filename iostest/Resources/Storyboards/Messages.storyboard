@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="56k-tV-44Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Siz-PN-rfE">
             <objects>
-                <navigationController id="56k-tV-44Z" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="56k-tV-44Z" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fmU-pb-2qV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -25,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-854" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--Mensagens-->
         <scene sceneID="Lwv-62-ElR">
             <objects>
-                <viewController id="VZr-wZ-fv0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="messagesViewController" id="VZr-wZ-fv0" customClass="MessagesViewController" customModule="iostest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mft-Kr-tZt"/>
                         <viewControllerLayoutGuide type="bottom" id="eYw-lN-i6W"/>
@@ -37,8 +39,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gx7-Uh-2hP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gx7-Uh-2hP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yPP-n3-jif">
                                     <size key="itemSize" width="50" height="50"/>
@@ -57,7 +59,10 @@
                             <constraint firstAttribute="trailing" secondItem="gx7-Uh-2hP" secondAttribute="trailing" id="cDe-DX-VlW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7k6-ud-Pbq"/>
+                    <navigationItem key="navigationItem" title="Mensagens" id="7k6-ud-Pbq"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gx7-Uh-2hP" id="ib7-Sg-y4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9K5-ou-NNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
