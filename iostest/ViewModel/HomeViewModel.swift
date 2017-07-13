@@ -18,12 +18,3 @@ class HomeViewModel: ViewModel {
         self.coordinator = coordinator
     }
 }
-
-// MARK: Actions
-
-extension HomeViewModel {
-
-    func present(_ view: UIView) {
-        coordinator.present(view)
-    }
-}

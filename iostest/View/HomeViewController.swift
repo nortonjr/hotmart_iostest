@@ -12,7 +12,7 @@ import RxCocoa
 import RxDataSources
 import SnapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var  tableView: UITableView!
 
@@ -87,21 +87,4 @@ extension HomeViewController {
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag )
     }
-}
-
-// MARK: Table View delegate
-
-extension HomeViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        switch indexPath.item {
-//        case 1:
-//            return staticCells[0].frame.size.height
-//        case 2:
-//            return staticCells[1].frame.size.height
-//        case 3:
-//            return (tableView.frame.height) - (staticCells[0].frame.height + staticCells[1].frame.height)
-//        default:
-//            return 44
-//        }
-//    }
 }

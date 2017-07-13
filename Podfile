@@ -8,10 +8,9 @@ abstract_target 'iostestCommon' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'RxSwift',               '~> 3.0'
-  pod 'RxCocoa',               '~> 3.0'
+  pod 'RxSwift',               '~> 3.4'
+  pod 'RxCocoa',               '~> 3.4'
   pod 'RxDataSources',         '~> 1.0'
-#  pod 'RxGesture'
   pod 'NSObject+Rx',           '2.0.0'
   pod 'RxSwiftExt',            '~> 2.0'
 
@@ -19,6 +18,7 @@ abstract_target 'iostestCommon' do
 
   pod 'R.swift'
   pod 'SnapKit'
+  pod 'Presentr',              '~> 1.1'
 
   pod 'LKTabBarController'
 

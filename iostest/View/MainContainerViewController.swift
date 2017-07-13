@@ -28,7 +28,6 @@ class MainContainerViewController: UIViewController {
 
         tabBar.rx.didSelectItem
             .subscribe(onNext: { (selectedItem) in
-//                print("\(selectedItem.tag)")
                 self.viewModel.selectedTabBar(tab: selectedItem.tag)
             })
             .disposed(by: disposeBag)
@@ -39,6 +38,10 @@ class MainContainerViewController: UIViewController {
         setupTabBarSeparators()
         setupNavbarAppearence()
 
+        showDashboard()
+    }
+
+    func showDashboard() {
         guard let view = presentingView else { return }
         view.frame = contentView.bounds
         contentView.addSubview(view)
@@ -54,7 +57,7 @@ class MainContainerViewController: UIViewController {
 extension MainContainerViewController {
 
     fileprivate func setupNavbarAppearence() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.ic_dehaze(), style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.ic_dehaze(), style: .plain, target: self, action: #selector(showMenu))
         navigationItem.leftBarButtonItem?.tintColor = UIColor.white
     }
 
@@ -86,6 +89,10 @@ extension MainContainerViewController {
 
             self.tabBar.addSubview(separator)
         }
+    }
+
+    func showMenu() {
+        viewModel.coordinator.presentMenu()
     }
 
     fileprivate func tabBarItemFactory(image: UIImage, tag: Int) -> UITabBarItem {

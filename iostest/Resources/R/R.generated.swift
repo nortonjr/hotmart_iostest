@@ -31,7 +31,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 14 images.
   struct image {
     /// Image `LaunchImage`.
     static let launchImage = Rswift.ImageResource(bundle: R.hostingBundle, name: "LaunchImage")
@@ -45,24 +45,22 @@ struct R: Rswift.Validatable {
     static let ico_dashboard = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_dashboard")
     /// Image `ico_lupa`.
     static let ico_lupa = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_lupa")
-    /// Image `ico_mensagem-1`.
-    static let ico_mensagem1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_mensagem-1")
     /// Image `ico_mensagem`.
     static let ico_mensagem = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_mensagem")
     /// Image `ico_meus_produtos`.
     static let ico_meus_produtos = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_meus_produtos")
     /// Image `ico_minha_conta`.
     static let ico_minha_conta = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minha_conta")
-    /// Image `ico_minhas_vendas-1`.
-    static let ico_minhas_vendas1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minhas_vendas-1")
     /// Image `ico_minhas_vendas`.
     static let ico_minhas_vendas = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_minhas_vendas")
-    /// Image `ico_notificacoes-1`.
-    static let ico_notificacoes1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_notificacoes-1")
     /// Image `ico_notificacoes`.
     static let ico_notificacoes = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_notificacoes")
     /// Image `ico_sobre_o_app`.
     static let ico_sobre_o_app = Rswift.ImageResource(bundle: R.hostingBundle, name: "ico_sobre_o_app")
+    /// Image `menu_ico_minhas_vendas`.
+    static let menu_ico_minhas_vendas = Rswift.ImageResource(bundle: R.hostingBundle, name: "menu_ico_minhas_vendas")
+    /// Image `obiwankenobi`.
+    static let obiwankenobi = Rswift.ImageResource(bundle: R.hostingBundle, name: "obiwankenobi")
     
     /// `UIImage(named: "LaunchImage", bundle: ..., traitCollection: ...)`
     static func launchImage(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -99,11 +97,6 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.ico_mensagem, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "ico_mensagem-1", bundle: ..., traitCollection: ...)`
-    static func ico_mensagem1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ico_mensagem1, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "ico_meus_produtos", bundle: ..., traitCollection: ...)`
     static func ico_meus_produtos(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ico_meus_produtos, compatibleWith: traitCollection)
@@ -119,19 +112,9 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.ico_minhas_vendas, compatibleWith: traitCollection)
     }
     
-    /// `UIImage(named: "ico_minhas_vendas-1", bundle: ..., traitCollection: ...)`
-    static func ico_minhas_vendas1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ico_minhas_vendas1, compatibleWith: traitCollection)
-    }
-    
     /// `UIImage(named: "ico_notificacoes", bundle: ..., traitCollection: ...)`
     static func ico_notificacoes(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.ico_notificacoes, compatibleWith: traitCollection)
-    }
-    
-    /// `UIImage(named: "ico_notificacoes-1", bundle: ..., traitCollection: ...)`
-    static func ico_notificacoes1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ico_notificacoes1, compatibleWith: traitCollection)
     }
     
     /// `UIImage(named: "ico_sobre_o_app", bundle: ..., traitCollection: ...)`
@@ -139,13 +122,25 @@ struct R: Rswift.Validatable {
       return UIKit.UIImage(resource: R.image.ico_sobre_o_app, compatibleWith: traitCollection)
     }
     
+    /// `UIImage(named: "menu_ico_minhas_vendas", bundle: ..., traitCollection: ...)`
+    static func menu_ico_minhas_vendas(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.menu_ico_minhas_vendas, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "obiwankenobi", bundle: ..., traitCollection: ...)`
+    static func obiwankenobi(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.obiwankenobi, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
     /// Nib `DashboardHeaderCell`.
     static let dashboardHeaderCell = _R.nib._DashboardHeaderCell()
+    /// Nib `MenuItemCell`.
+    static let menuItemCell = _R.nib._MenuItemCell()
     /// Nib `MessageBubbleCell`.
     static let messageBubbleCell = _R.nib._MessageBubbleCell()
     /// Nib `RecentMessagesCell`.
@@ -158,6 +153,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "DashboardHeaderCell", in: bundle)`
     static func dashboardHeaderCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.dashboardHeaderCell)
+    }
+    
+    /// `UINib(name: "MenuItemCell", in: bundle)`
+    static func menuItemCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.menuItemCell)
     }
     
     /// `UINib(name: "MessageBubbleCell", in: bundle)`
@@ -183,12 +183,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 5 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 6 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `SalesReceiptsContainerCell`.
     static let salesReceiptsContainerCell: Rswift.ReuseIdentifier<SalesReceiptsContainerCell> = Rswift.ReuseIdentifier(identifier: "SalesReceiptsContainerCell")
     /// Reuse identifier `dashboardHeaderCell`.
     static let dashboardHeaderCell: Rswift.ReuseIdentifier<DashboardHeaderCell> = Rswift.ReuseIdentifier(identifier: "dashboardHeaderCell")
+    /// Reuse identifier `menuItemCell`.
+    static let menuItemCell: Rswift.ReuseIdentifier<MenuItemCell> = Rswift.ReuseIdentifier(identifier: "menuItemCell")
     /// Reuse identifier `messageBubbleCell`.
     static let messageBubbleCell: Rswift.ReuseIdentifier<MessageBubbleCell> = Rswift.ReuseIdentifier(identifier: "messageBubbleCell")
     /// Reuse identifier `recentMessagesCell`.
@@ -287,6 +289,20 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "ico_lupa", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ico_lupa' is used in nib 'DashboardHeaderCell', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _MenuItemCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = MenuItemCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "menuItemCell"
+      let name = "MenuItemCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> MenuItemCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? MenuItemCell
       }
       
       fileprivate init() {}
@@ -391,13 +407,20 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let mainContainerViewController = StoryboardViewControllerResource<MainContainerViewController>(identifier: "mainContainerViewController")
+      let menuViewController = StoryboardViewControllerResource<MenuViewController>(identifier: "menuViewController")
       let name = "Main"
       
       func mainContainerViewController(_: Void = ()) -> MainContainerViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: mainContainerViewController)
       }
       
+      func menuViewController(_: Void = ()) -> MenuViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: menuViewController)
+      }
+      
       static func validate() throws {
+        if UIKit.UIImage(named: "obiwankenobi") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'obiwankenobi' is used in storyboard 'Main', but couldn't be loaded.") }
+        if _R.storyboard.main().menuViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'menuViewController' could not be loaded from storyboard 'Main' as 'MenuViewController'.") }
         if _R.storyboard.main().mainContainerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'mainContainerViewController' could not be loaded from storyboard 'Main' as 'MainContainerViewController'.") }
       }
       

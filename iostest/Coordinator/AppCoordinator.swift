@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyColor
+import Presentr
 
 class AppCoordinator: Coordinator {
 
@@ -23,6 +24,18 @@ class AppCoordinator: Coordinator {
         return R.storyboard.main.instantiateInitialViewController()
     }()
 
+    fileprivate lazy var presentr: Presentr = {
+        let customType = PresentationType.custom(width: .fluid(percentage: 0.9),
+                                                 height: .full,
+                                                 center: .customOrigin(origin: CGPoint(x: 0, y: 0)))
+
+        let presenter = Presentr(presentationType: customType)
+        presenter.transitionType = .coverHorizontalFromLeft
+        presenter.roundCorners = false
+
+        return presenter
+    }()
+
     fileprivate weak var navigationController: UINavigationController?
 
     required init(window: UIWindow) {
@@ -31,7 +44,7 @@ class AppCoordinator: Coordinator {
 
     func start() {
         guard let navigationController = baseViewController  else { fatalError("Error initializing main view controller") }
-
+        self.navigationController = navigationController
         let mainViewController = R.storyboard.main.mainContainerViewController()!
         mainViewController.viewModel = MainContainerViewModel(coordinator: self)
         navigationController.viewControllers = [mainViewController]
@@ -66,16 +79,34 @@ class AppCoordinator: Coordinator {
 extension AppCoordinator {
 
     func present(_ view: UIView) {
-        guard let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
+        guard let mainViewController = navigationController?.viewControllers.first as? MainContainerViewController else { return }
 
         mainViewController.presentingView = view
     }
 
     func presentTabView(_ view: UIView) {
-        guard let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
-        mainViewController.contentView.subviews.first?.removeFromSuperview()
+        guard let mainViewController = navigationController?.viewControllers.first as? MainContainerViewController else { return }
+        clearContentView()
         view.frame.size.height = mainViewController.contentView.frame.size.height
         mainViewController.contentView.addSubview(view)
+    }
+
+    func clearContentView() {
+        guard var mainViewController = navigationController?.viewControllers.first as? MainContainerViewController else { return }
+        mainViewController.contentView.subviews.first?.removeFromSuperview()
+    }
+
+    func presentDashboard() {
+        guard let home = self.childCoordinators[.home] as? HomeCoordinator else { return }
+        home.restart()
+    }
+
+    func injectDashboard(_ view: UIView) {
+        guard let mainViewController = navigationController?.viewControllers.first as? MainContainerViewController else { return }
+        clearContentView()
+        mainViewController.presentingView = view
+        mainViewController.showDashboard()
+        setupNavBarAppearence(index: 3)
     }
 
     func presentTab(index: Int) {
@@ -91,6 +122,23 @@ extension AppCoordinator {
         setupNavBarAppearence(index: index)
     }
 
+    func presentMenu() {
+        guard let menuViewController = R.storyboard.main.menuViewController(), let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
+
+        menuViewController.viewModel = MenuViewModel(appCoordinator: self)
+
+        mainViewController.customPresentViewController(self.presentr,
+                                                           viewController: menuViewController,
+                                                           animated: true,
+                                                           completion: nil)
+    }
+
+    func dismissMenu() {
+        guard let mainViewController = baseViewController?.viewControllers.first as? MainContainerViewController else { return }
+
+        mainViewController.dismiss(animated: true, completion: nil)
+    }
+
     func setupNavBarAppearence(index: Int) {
         switch index {
         case 0:
@@ -99,6 +147,9 @@ extension AppCoordinator {
         case 1:
             navigationController?.navigationBar.topItem?.title = "Minhas Vendas"
             navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainBlue
+        case 3:
+            navigationController?.navigationBar.topItem?.title = "Dashboard"
+            navigationController?.navigationBar.barTintColor = Stylesheet.Color.mainOrange
         default:
             break
         }

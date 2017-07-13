@@ -3,6 +3,7 @@ PODS:
     - SnapKit
   - NSObject+Rx (2.0.0):
     - RxSwift
+  - Presentr (1.2.3)
   - R.swift (3.3.0):
     - R.swift.Library (~> 3.0.2)
   - R.swift.Library (3.0.2)
@@ -22,10 +23,11 @@ PODS:
 DEPENDENCIES:
   - LKTabBarController
   - NSObject+Rx (= 2.0.0)
+  - Presentr (~> 1.1)
   - R.swift
-  - RxCocoa (~> 3.0)
+  - RxCocoa (~> 3.4)
   - RxDataSources (~> 1.0)
-  - RxSwift (~> 3.0)
+  - RxSwift (~> 3.4)
   - RxSwiftExt (~> 2.0)
   - SnapKit
   - SwiftyColor
@@ -33,6 +35,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   LKTabBarController: 4485e0dc6b71993889fcf52b0d8727583250a876
   NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
+  Presentr: a21c7bbb3532c8ff60320e235c0a4869e72f8885
   R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
   R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
@@ -42,6 +45,6 @@ SPEC CHECKSUMS:
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftyColor: 7fa09db14051bc5d7f539e1c4576665975225992
 
-PODFILE CHECKSUM: 9cf50adc59112e4dfd941b92d5cadd19a8ee64e7
+PODFILE CHECKSUM: be37136759e0ef2f030f029f7bc5f527b25d311f
 
 COCOAPODS: 1.2.1
