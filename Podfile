@@ -16,6 +16,8 @@ abstract_target 'iostestCommon' do
 
   pod 'SwiftyColor'
 
+  pod 'SwiftLint'
+
   pod 'R.swift'
   pod 'SnapKit'
   pod 'Presentr',              '~> 1.1'

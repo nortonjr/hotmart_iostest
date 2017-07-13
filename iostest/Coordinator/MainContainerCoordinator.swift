@@ -16,6 +16,5 @@ class MainContainerCoordinator: Coordinator {
         self.window = window
     }
 
-    func start() { 
-    }
+    func start() { }
 }

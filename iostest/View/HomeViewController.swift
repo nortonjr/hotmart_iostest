@@ -58,12 +58,12 @@ extension HomeViewController {
 
         let dashboardHeaderCell: DashboardHeaderCell = R.nib.dashboardHeaderCell.firstView(owner: self)!
         staticCells.append(dashboardHeaderCell)
-        totalHeight = totalHeight + dashboardHeaderCell.frame.size.height
+        totalHeight += dashboardHeaderCell.frame.size.height
 
         let recentMessagesCell: RecentMessagesCell = R.nib.recentMessagesCell.firstView(owner: self)!
         recentMessagesCell.viewModel = RecentMessagesViewModel()
         staticCells.append(recentMessagesCell)
-        totalHeight = totalHeight + recentMessagesCell.frame.size.height
+        totalHeight += recentMessagesCell.frame.size.height
 
         let salesReceiptsContainerCell: SalesReceiptsContainerCell = R.nib.salesReceiptsContainerCell.firstView(owner: self)!
         staticCells.append(salesReceiptsContainerCell)

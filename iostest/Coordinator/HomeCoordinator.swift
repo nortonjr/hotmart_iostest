@@ -27,7 +27,6 @@ class HomeCoordinator: Coordinator {
         self.appCoordinator = appCoordinator
     }
 
-//    fileprivate weak var homeViewController: HomeViewController?
     fileprivate weak var navigationController: UINavigationController?
 
     func start() {
