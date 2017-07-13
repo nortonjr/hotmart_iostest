@@ -64,9 +64,9 @@
 		1C76D74EAE2217F03FF696ED /* Pods-iostestCommon-iostest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iostestCommon-iostest/Pods-iostestCommon-iostest.release.xcconfig"; sourceTree = "<group>"; };
 		34DAC222BE686919DE1DDB1E /* Pods_iostestCommon_iostest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostestCommon_iostest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E4DA9087FA4A627C0DD9E4 /* Pods-iostestCommon-iostest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iostestCommon-iostest/Pods-iostestCommon-iostest.debug.xcconfig"; sourceTree = "<group>"; };
-		8BF70F612E51BF85206A126A /* Pods-iostestCommon-iostest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iostestCommon-iostest/Pods-iostestCommon-iostest.debug.xcconfig"; sourceTree = "<group>"; };
+		8BF70F612E51BF85206A126A /* Pods-iostestCommon-iostest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.debug.xcconfig"; path = "Pods-iostestCommon-iostest.debug.xcconfig"; sourceTree = "<group>"; };
 		C2643625D2DA0979CEA85788 /* Pods_iostest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iostest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCD0879A87C13717A56DB075 /* Pods-iostestCommon-iostest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iostestCommon-iostest/Pods-iostestCommon-iostest.release.xcconfig"; sourceTree = "<group>"; };
+		CCD0879A87C13717A56DB075 /* Pods-iostestCommon-iostest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostestCommon-iostest.release.xcconfig"; path = "Pods-iostestCommon-iostest.release.xcconfig"; sourceTree = "<group>"; };
 		DE5C6C0B7E316E37242F406B /* Pods-iostest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostest.release.xcconfig"; path = "Pods/Target Support Files/Pods-iostest/Pods-iostest.release.xcconfig"; sourceTree = "<group>"; };
 		F683CD7C368EBA5695EE1D9D /* Pods-iostest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iostest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iostest/Pods-iostest.debug.xcconfig"; sourceTree = "<group>"; };
 		FB3572DA1F1145AB00737535 /* iostest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iostest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +141,7 @@
 				0002C42146EB5B11E245231A /* Pods_iostestCommon_iostest.framework */,
 			);
 			name = Frameworks;
-			path = ..;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		3E8F0113B9AE17DCAB11E6D8 /* Pods */ = {
@@ -153,7 +153,7 @@
 				CCD0879A87C13717A56DB075 /* Pods-iostestCommon-iostest.release.xcconfig */,
 			);
 			name = Pods;
-			path = ..;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		492A322C828986E9F72960EE /* Pods */ = {
@@ -176,9 +176,9 @@
 		FB3572D11F1145AB00737535 = {
 			isa = PBXGroup;
 			children = (
-				FB3572DC1F1145AB00737535 /* iostest */,
-				492A322C828986E9F72960EE /* Pods */,
 				CFFAEFB41FF802F69B191792 /* Frameworks */,
+				492A322C828986E9F72960EE /* Pods */,
+				FB3572DC1F1145AB00737535 /* iostest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,22 +188,22 @@
 				FB3572DA1F1145AB00737535 /* iostest.app */,
 			);
 			name = Products;
-			path = ..;
+			path = Products;
 			sourceTree = "<group>";
 		};
 		FB3572DC1F1145AB00737535 /* iostest */ = {
 			isa = PBXGroup;
 			children = (
-				FB35730A1F11779300737535 /* Coordinator */,
-				FB35730B1F11779A00737535 /* View */,
-				FB35730C1F1177A100737535 /* ViewModel */,
-				FB52660E1F11954200CF7671 /* Common */,
 				FB3573091F11778D00737535 /* App */,
-				FB3572F11F114E5500737535 /* Resources */,
-				FB3572F31F114E6C00737535 /* Supporting Files */,
+				FB52660E1F11954200CF7671 /* Common */,
+				FB35730A1F11779300737535 /* Coordinator */,
 				26C69736B66A28965B26BA4D /* Frameworks */,
 				3E8F0113B9AE17DCAB11E6D8 /* Pods */,
 				FB3572DB1F1145AB00737535 /* Products */,
+				FB3572F11F114E5500737535 /* Resources */,
+				FB3572F31F114E6C00737535 /* Supporting Files */,
+				FB35730B1F11779A00737535 /* View */,
+				FB35730C1F1177A100737535 /* ViewModel */,
 			);
 			path = iostest;
 			sourceTree = "<group>";
@@ -261,8 +261,8 @@
 		FB35730B1F11779A00737535 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FB6303AC1F179EBD00D39EFE /* View Controller */,
 				FB3D826F1F12A37400B157C8 /* Cell */,
+				FB6303AC1F179EBD00D39EFE /* View Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,11 +272,11 @@
 			children = (
 				FB3D828A1F12D59E00B157C8 /* HomeViewModel.swift */,
 				FB5266251F12760A00CF7671 /* MainContainerViewModel.swift */,
+				FB9ACE811F16F17D00EC2B5B /* MenuItemViewModel.swift */,
+				FB9ACE831F16FFD900EC2B5B /* MenuViewModel.swift */,
 				FB3D827E1F12B24000B157C8 /* MessageBubbleViewModel.swift */,
 				FB66A6811F130D5700A3F3B8 /* MessageViewModel.swift */,
 				FB66A6851F13135100A3F3B8 /* RecentMessagesViewModel.swift */,
-				FB9ACE811F16F17D00EC2B5B /* MenuItemViewModel.swift */,
-				FB9ACE831F16FFD900EC2B5B /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,6 +286,8 @@
 			children = (
 				FB3D82721F12A40E00B157C8 /* DashboardHeaderCell.swift */,
 				FB3D82731F12A40E00B157C8 /* DashboardHeaderCell.xib */,
+				FB9ACE7D1F16EA3F00EC2B5B /* MenuItemCell.swift */,
+				FB9ACE7E1F16EA3F00EC2B5B /* MenuItemCell.xib */,
 				FB3D827A1F12AC5600B157C8 /* MessageBubbleCell.swift */,
 				FB3D827B1F12AC5600B157C8 /* MessageBubbleCell.xib */,
 				FB3D82761F12A81B00B157C8 /* RecentMessagesCell.swift */,
@@ -294,8 +296,6 @@
 				FB3D82871F12CF3500B157C8 /* SaleReceiptCell.xib */,
 				FB66A67D1F1307E000A3F3B8 /* SalesReceiptsContainerCell.swift */,
 				FB66A67E1F1307E000A3F3B8 /* SalesReceiptsContainerCell.xib */,
-				FB9ACE7D1F16EA3F00EC2B5B /* MenuItemCell.swift */,
-				FB9ACE7E1F16EA3F00EC2B5B /* MenuItemCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -326,10 +326,10 @@
 			children = (
 				FB5266211F126E0300CF7671 /* BaseView.swift */,
 				FB35730D1F11786A00737535 /* Coordinator.swift */,
+				FB9ACE851F17012700EC2B5B /* MenuItem.swift */,
 				FB52661F1F126D8D00CF7671 /* Presentable.swift */,
 				FB52661D1F126D3C00CF7671 /* Router.swift */,
 				FB52660C1F1194F900CF7671 /* ViewModel.swift */,
-				FB9ACE851F17012700EC2B5B /* MenuItem.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -339,11 +339,12 @@
 			children = (
 				FB3D82801F12B62A00B157C8 /* HomeViewController.swift */,
 				FB5266181F12021B00CF7671 /* MainContainerViewController.swift */,
+				FB827AF11F16443D00BFDDF5 /* MenuViewController.swift */,
 				FB827AE71F159AF400BFDDF5 /* MessagesViewController.swift */,
 				FB827AED1F15BA8500BFDDF5 /* SalesViewController.swift */,
-				FB827AF11F16443D00BFDDF5 /* MenuViewController.swift */,
 			);
 			name = "View Controller";
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		FB6303AD1F179ED600D39EFE /* Extensions */ = {
@@ -352,6 +353,7 @@
 				FB66A6831F1312F500A3F3B8 /* ObservableType+MessageViewModel.swift */,
 			);
 			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
